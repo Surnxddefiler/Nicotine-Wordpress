@@ -156,3 +156,11 @@ if ( ! function_exists( 'twentytwentyfive_format_binding' ) ) :
 		}
 	}
 endif;
+
+add_filter('site_url', function($url) {
+    return preg_replace("/^http:/i", "https:", $url);
+});
+
+add_filter('home_url', function($url) {
+    return preg_replace("/^http:/i", "https:", $url);
+});

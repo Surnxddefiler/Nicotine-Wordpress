@@ -92,7 +92,12 @@ define( 'WP_DEBUG', false );
 
 
 /* That's all, stop editing! Happy publishing. */
+// Force HTTPS
+if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
+    $_SERVER['HTTPS'] = 'on';
+}
 
+define('FORCE_SSL_ADMIN', true);
 
 
 /** Absolute path to the WordPress directory. */
