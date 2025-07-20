@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  wordpress:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - wordpress_data:/var/www/html/wp-content
+volumes:
+  wordpress_data:
