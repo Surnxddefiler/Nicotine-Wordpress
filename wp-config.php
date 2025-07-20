@@ -107,3 +107,6 @@ define('WP_SITEURL', 'https://nicotine-wordpress-production.up.railway.app');
 
 // Force server to believe HTTPS is used
 $_SERVER['HTTPS'] = 'on';
+if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
+    $_SERVER['HTTPS'] = 'on';
+}
