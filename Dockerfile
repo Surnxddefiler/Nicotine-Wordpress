@@ -1,4 +1,5 @@
 FROM wordpress:latest
+VOLUME /var/www/html/wp-content
 
 # ARG MYSQLPASSWORD
 # ARG MYSQLHOST
