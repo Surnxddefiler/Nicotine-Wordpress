@@ -163,3 +163,4 @@ add_filter('site_url', function($url) {
 add_filter('home_url', function($url) {
     return preg_replace("/^http:/i", "https:", $url);
 });
+echo 'hui';
