@@ -100,15 +100,3 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';
-
-// Force HTTPS for WordPress URLs
-define('WP_HOME', 'https://nicotine-wordpress-production.up.railway.app');
-define('WP_SITEURL', 'https://nicotine-wordpress-production.up.railway.app');
-
-// Force server to believe HTTPS is used
-$_SERVER['HTTPS'] = 'on';
-if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
-    $_SERVER['HTTPS'] = 'on';
-}
-
-error_log('wp-config.php loaded');
